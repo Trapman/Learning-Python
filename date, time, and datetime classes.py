@@ -59,3 +59,45 @@ print(now.strftime("Locale time: %X"))
 
 print(now.strftime("Current time: %I:%M:%S %p"))
 print(now.strftime("24-hour time: %H:%M"))
+                   
+                   
+# TIME DELTA #######################################
+# it's basically a span of time, helpful for time-based mathematics  
+from date time import timedelta     
+                   
+# just create the timedelta class and pass in the amount of time  that you want it to represent                  
+# construct a basic timedelta
+print(timedelta(days=365, hours=5, minutes=1)
+      
+#print today's date
+now = datetime.now()
+print("today is: " + str(now))
+
+# print today's date one year from now
+print("In one year from now, it will be: " + str(now + timedelta(365))
+
+# create a timedelta that uses more than one argument
+print("In 2 days and 3 weeks, it will be " + 
+      str(now + timedelta(days=2, weeks=3)))
+
+# calculate the date 1 week ago, formatted as a string
+t = datetime.now() - timedelta(weeks =1)
+s = t.strftime("%A %B %d, %Y)
+print("One week ago it was " + s)
+
+# Calculate how many days it is until the next April Fool's
+today = date.today()
+afd = date(today.year, 4, 1)
+
+# use date comparison to see if April Fool's has already gone this year
+# if it has, use replace() function to get the date for next year               
+if afd < today:
+  print("April Fool's Day already went by %d days ago" % ((today - afd).day
+  afd = afd.replace(year = today.year+1)
+
+# Now calculate the amount of time until April Fool's Day
+time_to_afd = afd - today
+print("It's just ", time_to_afd.days, "days to April Fool's Day")
+      
+      
+                   
