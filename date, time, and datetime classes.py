@@ -100,4 +100,52 @@ time_to_afd = afd - today
 print("It's just ", time_to_afd.days, "days to April Fool's Day")
       
       
-                   
+# WORKING WITH CALENDARS ##################################################### 
+# import calendar module
+import calendar
+
+# create plain text calendar
+c = calendar.TextCalendar(calendar.Sunday)      #adding .SUNDAY makes the calendar start with Sunday
+st = c.formatmonth(2020, 1, 0, 0)               #2020 for year, 1 for January
+print(st)         
+                                                          
+# create HTML formatted calendar
+hc = calendar.HTMLCalendar(calendar.SUNDAY)
+st = hc.formatmonth(2020, 1)
+print(st)
+
+# loop over the days of a month
+# zeroes mean that the day of the week is an overlapping month
+for i in c.itermonthdays(2020, 1):
+  print(i)
+
+# the Calendar module provides useful utilities for the given locale, such as the names of the days and months
+for name in calendar.month_name:
+  print(name)
+
+for day in calendar.day_name:
+   print(day)
+
+# Calculate days based on a rule
+# example: a team meeting on the first friday of every month
+# to figure out what days that would be for each month:
+print("Team meetings will be on: ")
+for m in range(1,13):
+  cal = calendar.monthcalendar(2020, m)             # m for month
+  weekone = cal[0]
+  weektwo = cal[1]
+
+  if weekone[calendar.FRIDAY] != 0:
+    meetday = weekone[calendar.FRIDAY]
+  else:
+    meetday = weektwo[caledar.FRIDAY]
+
+  print("%10s %2d" % (calendar.month_name[m], meetday))
+  
+                                                         
+                                                          
+                                                          
+                                                          
+                                                          
+                                                          
+                                                          
