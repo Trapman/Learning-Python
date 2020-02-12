@@ -51,4 +51,15 @@ def main():
   today = date.today()
   print ("Today's date is", today)  
   
-  # 
+ # OS PATH ###################################################
+#Brittany is using the OS path utilities functions to find out information on her system. How can she find out which operating system is imported into Python and print out the current working directory?
+
+import os
+  print(os.name)
+  print(os.getcwd())
+
+# READ AND WRITE #############################################
+# Carissa needs to implement reading and writing files in her Python code. Based on the information given, how do you read the breeders_for_cats.txt file that prints out the file to the console?
+
+with open('breeders_for_cats.txt', 'r') as reader:
+  print(reader.read())  
