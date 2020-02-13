@@ -63,3 +63,28 @@ import os
 
 with open('breeders_for_cats.txt', 'r') as reader:
   print(reader.read())  
+
+# JSON ###################################################################
+# William is tasked with creating JSON functionality with Python code. What code can he create that reads in JSON data and prints it to the console?
+
+import urllib.request
+ def main():
+    someUrlData = "http://somerandomJSONdata
+    webUrl = urllib.request.urlopen(someUrlData)
+    print("result number: " +str(webUrl.getcode()))
+    if (webUrl.getcode() == 100):
+       json_data = webUrl.read()      printResults(json_data)
+    else:
+       print("No JSON data received, ERROR!) 
+             
+# PARSING ############################################################################
+# How can you fetch internet data in Python that reads in 200 results from the Bing search engine and prints it out on the display console?
+
+import urllib.request
+def main();
+   webUrl = urllib.request.urlopen("http://www.bing.com")
+   bing_search_results = webUrl.read()
+print(bing_search_results)             
+             
+             
+             
